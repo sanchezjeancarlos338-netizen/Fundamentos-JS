@@ -1,0 +1,30 @@
+<script>
+    function cuentaBancaria(SaldoInicial) {
+    let saldo = SaldoInicial; 
+
+    return {
+        depositar: function (cantidad) {
+            saldo += cantidad;
+            console.log("Depósito: $" + cantidad);
+            console.log("Saldo actual: $" + saldo);
+        },
+
+        retirar: function (cantidad) {
+            if (cantidad <= saldo) {
+                saldo -= cantidad;
+                console.log("Retiro: $" + cantidad);
+                console.log("Saldo actual: $" + saldo);
+            } else {
+                console.log("Fondos insuficientes.");
+            }
+        }
+    };
+}
+
+const miCuenta = cuentaBancaria(2000);
+
+miCuenta.depositar(500);
+miCuenta.depositar(50);
+miCuenta.retirar();
+miCuenta.retirar();
+</script>
