@@ -1,3 +1,18 @@
 <script>
-    
+    function generarId() {
+    let id = 0;
+
+    return function () {
+        id++;
+        return id;
+    };
+}
+
+const obtenerId = generarId();
+
+console.log(obtenerId()); // 1
+console.log(obtenerId()); // 2
+console.log(obtenerId()); // 3
+console.log(obtenerId()); // 4
+console.log(obtenerId()); // 5
 </script>
