@@ -1,0 +1,29 @@
+<script>
+   // Ejemplo de TypeError, RangeError y SyntaxError en JavaScript
+
+// 1. TypeError
+try {
+    let numero = 10;
+    numero.toUpperCase(); // toUpperCase() no existe para números
+} catch (error) {
+    console.log("TypeError:", error.message);
+}
+
+
+// 2. RangeError
+try {
+    let numero = 10;
+    numero.toFixed(200); // El rango permitido es de 0 a 100
+} catch (error) {
+    console.log("RangeError:", error.message);
+}
+
+
+// 3. SyntaxError
+try {
+    JSON.parse("{nombre:'Juan'}"); // JSON con sintaxis incorrecta
+} catch (error) {
+    console.log("SyntaxError:", error.message);
+}
+
+</script>
