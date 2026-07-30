@@ -1,0 +1,17 @@
+<script>
+    // La Temporal Dead Zone (TDZ) o Zona Muerta Temporal es el período que existe desde que una variable declarada con let o const entra en su ámbito hasta el momento en que es inicializada. Durante ese tiempo, la variable ya existe, pero no se puede usar. Si intentamos acceder a ella antes de su declaración, JavaScript genera un ReferenceError.
+function ejemploTDZ() {
+    try {
+        console.log(nombre); // Error: está en la Temporal Dead Zone
+    } catch (error) {
+        console.log("Error:", error.message);
+    }
+
+    let nombre = "Jean Carlos";
+
+    console.log("Después de declarar la variable:");
+    console.log(nombre);
+}
+
+ejemploTDZ();
+</script>
