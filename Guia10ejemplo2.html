@@ -1,0 +1,12 @@
+
+    function dividir(a, b) {
+if (b === 0) {
+throw new Error(&quot;No se puede dividir entre cero&quot;);
+}
+return a / b;
+}
+try {
+dividir(10, 0);
+} catch (e) {
+console.log(e.message);
+}
