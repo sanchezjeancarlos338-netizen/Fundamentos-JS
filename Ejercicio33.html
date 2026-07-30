@@ -1,3 +1,23 @@
 <script>
-    
+ function ejemplo() {
+    if (true) {
+        var nombre = "Jean";
+        let edad = 20;
+
+        console.log("Dentro del if:");
+        console.log("Nombre:", nombre);
+        console.log("Edad:", edad);
+    }
+
+    console.log("Fuera del if:");
+    console.log("Nombre:", nombre); // Funciona porque var tiene ámbito de función
+
+    try {
+        console.log("Edad:", edad); // Genera un error
+    } catch (error) {
+        console.log("Error:", error.message);
+    }
+}
+
+ejemplo(); 
 </script>
